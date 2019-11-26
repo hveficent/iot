@@ -3,6 +3,7 @@ from odoo import api, fields, models
 
 class IotDeviceApplyTemplate(models.TransientModel):
     _name = 'iot.device.apply.template'
+    _description = 'IoT Device Apply Template'
 
     device_id = fields.Many2one('iot.device', readonly=True, required=True)
     template_id = fields.Many2one('iot.template', required=True)
@@ -29,6 +30,7 @@ class IotDeviceApplyTemplate(models.TransientModel):
 
 class IotDeviceApplyTemplateValues(models.TransientModel):
     _name = 'iot.device.apply.template.values'
+    _description = 'IoT Device Apply Template Values'
 
     apply_template_id = fields.Many2one('iot.device.apply.template')
     key = fields.Char(required=True, readonly=True)

@@ -6,6 +6,7 @@ from odoo import api, fields, models
 
 class IotDeviceInputUsageWizard(models.TransientModel):
     _name = 'iot.device.input.usage.wizard'
+    _description = 'IoT Device Input Usage Wizard'
 
     input_id = fields.Many2one(
         'iot.device.input',

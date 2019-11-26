@@ -4,6 +4,7 @@ from uuid import uuid4
 
 class IotDeviceConfigure(models.TransientModel):
     _name = 'iot.device.configure'
+    _description = 'IoT Device Configure'
 
     generated = fields.Boolean(default=False)
     serial = fields.Char(readonly=True)

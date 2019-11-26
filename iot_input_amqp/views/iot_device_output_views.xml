@@ -4,7 +4,7 @@
     <record id="iot_device_output_form" model="ir.ui.view">
         <field name="name">iot.device.output.form</field>
         <field name="model">iot.device.output</field>
-        <field name="inherit_id" ref="iot.iot_device_output_form"/>
+        <field name="inherit_id" ref="iot_output.iot_device_output_form"/>
         <field name="arch" type="xml">
             <field name="system_id" position="after">
                 <field name="exchange" attrs="{'invisible': [('system_id', '!=', %(iot_input_amqp.amqp_system)s)]}"/>

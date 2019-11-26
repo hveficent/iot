@@ -5,6 +5,7 @@ import json
 
 class IotSensor(models.Model):
     _name = 'iot.sensor'
+    _description = 'IoT Sensor'
 
     name = fields.Char(required=True)
     input_id = fields.Many2one('iot.device.input')
@@ -66,6 +67,7 @@ class IotSensor(models.Model):
 
 class IotSensorValues(models.Model):
     _name = 'iot.sensor.value'
+    _description = 'IoT Sensor Value'
 
     sensor_id = fields.Many2one('iot.sensor', required=True, readonly=True)
     date = fields.Datetime(required=True, readonly=True)

@@ -25,8 +25,7 @@ class IotTemplate(models.Model):
     _parent_store = True
     _parent_order = 'name'
 
-    parent_left = fields.Integer(index=True)
-    parent_right = fields.Integer(index=True)
+    parent_path = fields.Char(index=True)
     name = fields.Char(required=True)
     input_ids = fields.One2many(
         'iot.template.input', inverse_name='template_id',
